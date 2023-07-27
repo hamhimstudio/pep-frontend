@@ -7,21 +7,20 @@
   <title>Pepsearch</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" type="image/png" href="/assets/logo-icon.png" />
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
  <body>
 <center>
-<img src="assets/logo-text.png" id="my-img" height="60" width="300">
+<img src="../assets/logo-text.png" class="peps-logo" height="60" width="300">
 <br>
 <br>
 <br>
-<form id="standard" method="get" action="/search">
+<form id="standard" method="get" action="../search">
   <div class="input-group">
     <input type="text" class="form-control" name="q" maxlength="150" id="search-bar" placeholder="Search the web with Pepsearch…">
-    <button class="btn btn-primary" type="submit" id="button-addon2">🔍</button>
+    <button class="btn btn-primary" type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
   </div>
 </form>
 </center>
@@ -40,11 +39,15 @@
 }
 </style>
 <style>
+    .peps-logo {
+      padding-top: 64px;
+      padding-bottom: 64px;
+      max-width: 100%;
+      height: auto;
+    }
 img{
 background-color: #40444b;
 }
-</style>
-<style>
 #standard {
       display: flex;
       justify-content: space-between;
