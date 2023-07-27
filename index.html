@@ -14,12 +14,7 @@
 
 <body>
   <center>
-    <img src="assets/logo-text.png" id="my-img" height="100" width="800">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <img src="assets/logo-text.png" class="peps-logo" height="100" width="800">
     <form id="standard" method="get" action="search/"> 
       <div class="input-group">
         <input type="text" class="form-control" name="q" maxlength="150" id="search-bar"
@@ -49,14 +44,14 @@
     }
   </style>
   <style>
-    #my-img {
+    .peps-logo {
+      padding-top: 32px;
+      padding-bottom: 32px;
       max-width: 100%;
       height: auto;
     }
-
-
     @media screen and (max-width: 768px) {
-      #my-img {
+      .peps-logo {
         max-width: 100%;
       }
     }
