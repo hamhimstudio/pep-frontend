@@ -26,7 +26,33 @@
       </center>
    <div id="results">
     </div>
+   <style>
+     a {
+            font-size: 20px;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            color: #eeeeee;
+        }
+        #results {
+            margin-top: 16px;
+	    padding-left: 23px;
+	    margin-right: 10px;
+        }
+	@media only screen and (max-width: 975px) {
+  #result {
+     margin-top: 16px;
+     padding-left: 0px;
+	  
 
+    
+  }
+}
+
+</style>
     <script>
         const form = document.getElementById('search-form');
         const queryInput = document.getElementById('query');
