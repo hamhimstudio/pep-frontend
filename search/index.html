@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width">
       <title>Prizmarine - Search</title>
-      <link href="style.css" rel="stylesheet" type="text/css" />
+      <link href="../style.css" rel="stylesheet" type="text/css" />
       <link rel="shortcut icon" type="image/png" href="../assets/logo-icon.png" />
       <script src="https://cdn.tailwindcss.com"></script>
       <meta name="title" content="Prizmarine - Simple Search Engine">
@@ -37,8 +37,23 @@
       </button>
     </form>
   </div>
+</center>
+<br>
+<script>
+  function side_toggle() {
+    document.getElementById("mayzer").classList.toggle("hidden")
+  }
+</script>
 
-      </center>
+<div class="float-right sticky top-0">
+  <button class="bg-blue-500 text-white px-4 py-2 rounded-r" onclick="side_toggle()">&#9776;</button>
+</div>
+
+<div id="mayzer" class="sticky top-0 container bg-slate-800 max-w-screen-sm w-full h-full aspect-square float-right hidden">
+  <iframe src="https://armai-dev.github.io/Mayzer/" frameborder="0" class="right-0 w-full max-w-screen-sm aspect-square"></iframe>
+</div>
+
+
    <div id="results">
     </div>
    <style>
