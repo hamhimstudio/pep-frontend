@@ -3,8 +3,12 @@ html {
   width: 100%;
 }
 
+.logolol {
+  float: left;
+  margin: 2px;
+}
 
-img{
+img {
 background-color: #40444b;
 }
 
