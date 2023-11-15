@@ -18,22 +18,9 @@
       <meta name="revisit-after" content="1 days">
    </head>
    <body>
-	<a href="/"><img id="logolol" class="center" src="../assets/logo-icon.png" height="70" width="70" alt="pepsearch logo" style="float:left;margin:10px 20px;"></a>
-  <script>
-  function side_toggle() {
-    document.getElementById("mayzer").classList.toggle("hidden")
-  }
-</script>
+	<a href="/"><img id="logolol" class="sticky top-3 center" src="../assets/logo-icon.png" height="70" width="70" alt="pepsearch logo" style="float:left;margin:10px 20px;"></a>
 
-<div class="float-right sticky top-0">
-  <button class="bg-blue-500 text-white px-4 py-2 rounded-3xl" onclick="side_toggle()">&#9776;</button>
-</div>
-
-<div id="mayzer" class="sticky top-0 container bg-slate-800 max-w-screen-sm w-full h-full aspect-square float-right hidden">
-  <iframe src="https://armai-dev.github.io/Mayzer" frameborder="0" class="border-4 border-zinc-600 border-dashed right-0 w-full max-w-screen-sm aspect-square"></iframe>
-</div>
-
-	   <div class="max-w-full ml-2 bg-#374151 p-6 rounded-xl shadow-md">
+	   <div class="sticky top-3 max-w-full ml-2 bg-#374151 p-6 rounded-xl shadow-md">
     <form id="search-form" class="flex items-center">
       <input
         type="text"
@@ -53,6 +40,9 @@
     </form>
   </div>
 <br>
+	   <div id="mayzer" class="top-0 container bg-slate-800 max-w-screen-sm w-full h-full aspect-square float-right">
+  <iframe src="https://armai-dev.github.io/Mayzer" frameborder="0" class="border-4 border-zinc-600 border-dashed right-0 w-full max-w-screen-sm aspect-square"></iframe>
+</div>
 
    <div id="results">
     </div>
