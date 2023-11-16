@@ -9,20 +9,19 @@ function getUrlParameter(sParam) {
       }
     }
   }
-  var q = getUrlParameter('q');
-  if (!q) {
+  var queryParam = getUrlParameter('q'); // Gets the query from the url param
+  if (!queryParam) {
     history.back();
   }
-  const qf = q.replaceAll('+', '%20');
-  const qfc = decodeURIComponent(qf);
-  checkForBangs(q);
-  document.getElementById('default-search').value = qfc;
+  const searchTerm = decodeURIComponent(queryParam.replaceAll('+', '%20')); // replaces the + with %20 then space, 
+                                                        // e.g "search+test" -> search%20test" -> "search Test"
+  checkForBangs(queryParam);
+  document.getElementById('default-search').value = searchTerm;
   window.addEventListener('popstate', function (event) {
-    q = getUrlParameter('q');
-    qf = q.replaceAll('+', '%20');
-    qfc = decodeURIComponent(qf);
-    checkForBangs(q);
-    document.getElementById('searchbox').value = qfc;
+    queryParam = getUrlParameter('q');
+    searchTerm = decodeURIComponent(queryParam.replaceAll('+', '%20'));
+    checkForBangs(queryParam);
+    document.getElementById('searchbox').value = searchTerm;
   });
-  document.title = qfc + " - Prizmarine Search";
+  document.title = searchTerm + " - Pepsearch Search";
   const queryString = window.location.search;
