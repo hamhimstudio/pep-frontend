@@ -3,9 +3,12 @@ html {
   width: 100%;
 }
 
-
-img{
-background-color: #40444b;
+.logolol {
+  float: left;
+  margin: 2px;
+}
+.bg-barfly {
+  background-color: #374151;
 }
 
 * {
