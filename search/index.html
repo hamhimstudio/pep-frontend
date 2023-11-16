@@ -80,19 +80,18 @@
       form.addEventListener('submit', async (e) => {
           e.preventDefault();
           const query = queryInput.value.trim();
-	const apiUrl = `https://pepsearch.replit.app/search?q=${encodeURIComponent(query)}`;
-      
-	fetch(apiurl
-          try {
-              const response = await fetch(apiUrl, { headers });
-              const data = await response.json();
-              displayResults(data);
-              boldText(query);
-          } catch (error) {
-              console.error('Error fetching data:', error);
-              resultsDiv.innerHTML = '<p>An error occurred while fetching results.</p>';
-          }
-      });
+const apiUrl = `https://pepsearch.replit.app/search?q=${encodeURIComponent(query)}`;
+
+try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    displayResults(data);
+    boldText(query);
+} catch (error) {
+    console.error('Error fetching data:', error);
+    resultsDiv.innerHTML = '<p>An error occurred while fetching results.</p>';
+}
+
       
       function displayResults(data) {
           resultsDiv.innerHTML = '';
