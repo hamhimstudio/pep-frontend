@@ -81,11 +81,8 @@
           e.preventDefault();
           const query = queryInput.value.trim();
 	const apiUrl = `https://pepsearch.replit.app/search?q=${encodeURIComponent(query)}`;
-              'Accept': 'application/json',
-              'Accept-Encoding': 'gzip',
-              'X-Subscription-Token': apiKey
-          };
       
+	fetch(apiurl
           try {
               const response = await fetch(apiUrl, { headers });
               const data = await response.json();
