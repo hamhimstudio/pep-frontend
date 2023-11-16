@@ -80,7 +80,7 @@
       form.addEventListener('submit', async (e) => {
           e.preventDefault();
           const query = queryInput.value.trim();
-	const apiUrl = `https://pepbackend.jacobi090.repl.co/search?q=${encodeURIComponent(query)}`;
+	    const apiUrl = `https://pepbackend.jacobi090.repl.co/search?q=${encodeURIComponent(query)}`;
               'Accept': 'application/json',
               'Accept-Encoding': 'gzip',
               'X-Subscription-Token': apiKey

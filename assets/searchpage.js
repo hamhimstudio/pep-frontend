@@ -17,6 +17,7 @@ function getUrlParameter(sParam) {
                                                         // e.g "search+test" -> search%20test" -> "search Test"
   checkForBangs(queryParam);
   document.getElementById('default-search').value = searchTerm;
+
   window.addEventListener('popstate', function (event) {
     queryParam = getUrlParameter('q');
     searchTerm = decodeURIComponent(queryParam.replaceAll('+', '%20'));
