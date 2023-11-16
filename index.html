@@ -45,35 +45,8 @@
                 <a href="./contact" class="hover:text-gray-300 transition duration-150">Contact</a>
             </div>
         </center>
-        <style>
-            .peps-logo{padding-top:64px;padding-bottom:64px;max-width:100%;height:auto;}
-            @media screen and (max-width:768px){.peps-logo{max-width:100%;}}
-            body{background-color:#40444b;color:white;}
-        </style>
-        <!-- // Css code for hiding all the funfact list. (!!! Dont worry!!! The js code will take a funfact from the hided list and show only 1 funfact.) -->
-        <style>
-            #phrases {
-            display: none;
-            }
-        </style>
-        <!-- // Here is the js code for funfact. every refresh, a new funfact is here. -->
-        <script>
-            async function getRandomPhrase() {
-               var randomPhrase;
-               await fetch("https://api.api-ninjas.com/v1/facts?limit=1", {
-                  "headers": {
-                     "content-type": "application/json",
-                     "x-api-key": "1HHHukaNEC5Kh3iDOLeZjQ==nxxKAnwy9XbK9bYM"
-                  },
-                  "method": "GET",
-                  "credentials": "omit",                  
-               }).then(response => response.json())
-               .then(json => randomPhrase = json[0]['fact']) 
 
-               document.getElementById("phrase").innerHTML = randomPhrase
-            }
-            
-            window.onload = getRandomPhrase();
-        </script>
+        <!-- // Here is the js code for funfact. every refresh, a new funfact is here. -->
+        <script src="/assets/funFact.js"></script>
     </body>
 </html>
